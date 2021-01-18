@@ -31,7 +31,7 @@ jobs:
           TARGET_VERSION: ${GITHUB_REF#refs/*/}
         run: |
           echo "RELEASE_VERSION=$TARGET_VERSION" >> $GITHUB_ENV
-          echo "LOCAL_FILENAME=factorio_headless_x64_$TARGET_VERSION.tar.xz" >> $GITHUB_ENV
+          echo "LOCAL_FILENAME=factorio_headless_x64.tar.xz" >> $GITHUB_ENV
           echo "DOWNLOAD_URL=https://www.factorio.com/get-download/$TARGET_VERSION/headless/linux64" >> $GITHUB_ENV
 
       - name: "download factorio headless server binary"
