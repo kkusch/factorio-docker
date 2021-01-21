@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 VERSION=$1
+REGISTRY=kkusch91
 
 if [ -z ${VERSION} ]
 then
@@ -23,5 +24,5 @@ then
     exit 1
 fi
 
-docker build --build-arg factorio_version=${VERSION} -t kkusch91/factorio:${VERSION} -t kkusch91/factorio:latest .
+docker build --build-arg factorio_version=${VERSION} -t $REGISTRY/factorio:${VERSION} -t $REGISTRY/factorio:latest .
 rm $LOCAL_FILENAME
